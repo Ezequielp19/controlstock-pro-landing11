@@ -1,0 +1,214 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* GestiónPro Brand Colors */
+  --color-gp-primary-50: #eaf0fc;
+  --color-gp-primary-100: #d0def8;
+  --color-gp-primary-200: #a6c1f2;
+  --color-gp-primary-300: #739deb;
+  --color-gp-primary-400: #4476e3;
+  --color-gp-primary-500: #2256d0;
+  --color-gp-primary-600: #1e408c;
+  --color-gp-primary-700: #183272;
+  --color-gp-primary-800: #162b5d;
+  --color-gp-primary-900: #15264c;
+  --color-gp-primary: var(--color-gp-primary-600);
+
+  --color-gp-secondary-50: #eefcf6;
+  --color-gp-secondary-100: #d3f8e6;
+  --color-gp-secondary-200: #aaf0ce;
+  --color-gp-secondary-300: #72e4b0;
+  --color-gp-secondary-400: #3ad291;
+  --color-gp-secondary-500: #15b67a;
+  --color-gp-secondary-600: #108d64;
+  --color-gp-secondary-700: #0d6f51;
+  --color-gp-secondary-800: #0b5842;
+  --color-gp-secondary-900: #094937;
+  --color-gp-secondary: var(--color-gp-secondary-600);
+
+  --color-gp-accent-50: #fff7ed;
+  --color-gp-accent-100: #ffedd5;
+  --color-gp-accent-200: #fed7aa;
+  --color-gp-accent-300: #fdba74;
+  --color-gp-accent-400: #fb923c;
+  --color-gp-accent-500: #f97316;
+  --color-gp-accent-600: #ea580c;
+  --color-gp-accent-700: #c2410c;
+  --color-gp-accent-800: #9a3412;
+  --color-gp-accent-900: #7c2d12;
+  --color-gp-accent: var(--color-gp-accent-600);
+
+  --color-gp-highlight-50: #f8fce7;
+  --color-gp-highlight-100: #ecf8c5;
+  --color-gp-highlight-200: #d9f191;
+  --color-gp-highlight-300: #c1e658;
+  --color-gp-highlight-400: #a9d629;
+  --color-gp-highlight-500: #90b71c;
+  --color-gp-highlight-600: #709112;
+  --color-gp-highlight-700: #556e13;
+  --color-gp-highlight-800: #455716;
+  --color-gp-highlight-900: #3a4916;
+  --color-gp-highlight: var(--color-gp-highlight-500);
+
+  --color-gp-olive-50: #f4fce7;
+  --color-gp-olive-100: #e5f8c3;
+  --color-gp-olive-200: #cef18b;
+  --color-gp-olive-300: #b0e54d;
+  --color-gp-olive-400: #92d422;
+  --color-gp-olive-500: #70b00c;
+  --color-gp-olive-600: #5b8907;
+  --color-gp-olive-700: #446809;
+  --color-gp-olive-800: #39520e;
+  --color-gp-olive-900: #314411;
+  --color-gp-olive: var(--color-gp-olive-600);
+
+  --color-gp-neutral-50: #f8fafc;
+  --color-gp-neutral-100: #f1f5f9;
+  --color-gp-neutral-200: #e2e8f0;
+  --color-gp-neutral-300: #cbd5e1;
+  --color-gp-neutral-400: #94a3b8;
+  --color-gp-neutral-500: #64748b;
+  --color-gp-neutral-600: #475569;
+  --color-gp-neutral-700: #334155;
+  --color-gp-neutral-800: #1e293b;
+  --color-gp-neutral-900: #0f172a;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 221 63% 33%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 160 79% 31%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 188 79% 31%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 221 63% 33%;
+    --chart-1: 221 63% 33%;
+    --chart-2: 160 79% 31%;
+    --chart-3: 188 79% 31%;
+    --chart-4: 75 73% 41%;
+    --chart-5: 81 90% 28%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 221 63% 33%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 221 63% 33%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground text-lg;
+  }
+}
+@layer utilities {
+  .animate-bounce-subtle {
+    animation: bounce-subtle 3s infinite;
+  }
+
+  @keyframes bounce-subtle {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-8px);
+    }
+    60% {
+      transform: translateY(-4px);
+    }
+  }
+}
