@@ -142,16 +142,16 @@ const faqs = [
 
 const cases = [
   {
-    title: "Caso comercio de barrio",
-    text: "Control de precios, stock y fiados.",
+    title: "Cliente real: La Tuerca del Cosito",
+    text: "Hoy le ayuda mucho con el control de stock y a ordenar mejor lo que entra y lo que sale.",
   },
   {
-    title: "Caso local de ropa",
-    text: "Control de ventas, productos y ganancias.",
+    title: "Cliente real: Mini 24 hs",
+    text: "Le sirve para generar ventas desde la mini web y recibir pedidos que llegan directo por WhatsApp.",
   },
   {
-    title: "Caso bazar",
-    text: "Control de mercadería, caja diaria y productos más vendidos.",
+    title: "También puede ayudarte a vos",
+    text: "Si vendés productos todos los días, GestiónPro te ayuda a ordenar stock, ventas, precios, fiados y consultas de clientes.",
   },
 ]
 
@@ -380,32 +380,54 @@ export default function GestionProLanding() {
         <section className="pb-20 md:pb-32">
           <div className="container px-4 md:px-6">
             <Card className="overflow-hidden border-0 bg-gradient-to-r from-gp-primary-50 to-gp-secondary-50 shadow-lg">
-              <CardContent className="grid gap-8 p-8 md:grid-cols-[1.2fr_0.8fr] md:p-10">
+              <CardContent className="grid gap-8 p-8 md:grid-cols-[1.1fr_0.9fr] md:p-10">
                 <div className="space-y-4">
                   <Badge className="w-fit bg-gp-primary text-white">Incluido en el sistema</Badge>
                   <h2 className="text-3xl font-bold tracking-tight text-gp-neutral-900 md:text-4xl">
-                    También tenés una mini web lista para mostrar tu negocio
+                    También tenés una mini web lista para vender y mostrar lo que tenés
                   </h2>
                   <p className="text-lg leading-relaxed text-gp-neutral-700">
-                    Dentro de GestiónPro ya viene integrada una mini web que podés pasarle a tus clientes y sumar a tus redes sociales.
+                    Dentro de GestiónPro ya viene integrada una mini web que se arma con los productos de tu stock y la podés compartir enseguida.
                   </p>
                   <p className="text-gp-neutral-600">
-                    Te sirve para mostrar productos, compartir tu negocio más fácil y darle a tus clientes un lugar simple donde ver lo que vendés.
+                    Tus clientes ven lo que vendés, eligen productos y te llega el pedido directo por WhatsApp.
                   </p>
+
+                  <div className="grid gap-3 pt-2 sm:grid-cols-2">
+                    {[
+                      "Se cargan los productos de tu stock",
+                      "Tiene categorías para ordenar mejor",
+                      "Te da un link para redes sociales",
+                      "Te da un link para pasar a clientes",
+                      "Tiene carrito de compras",
+                      "Los pedidos te llegan a tu WhatsApp",
+                    ].map((item) => (
+                      <div key={item} className="flex items-start gap-2 rounded-xl bg-white/80 p-3 shadow-sm">
+                        <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-gp-secondary" />
+                        <p className="text-sm font-medium text-gp-neutral-700">{item}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-3 md:grid-cols-1">
+                <div className="grid gap-4">
                   <div className="rounded-2xl bg-white p-5 shadow-sm">
-                    <p className="mb-2 font-semibold text-gp-neutral-900">La compartís por WhatsApp</p>
-                    <p className="text-sm text-gp-neutral-600">Mandás el enlace directo a clientes interesados.</p>
+                    <p className="mb-2 font-semibold text-gp-neutral-900">Cómo la usan tus clientes</p>
+                    <p className="text-sm leading-relaxed text-gp-neutral-600">
+                      Entran desde un link, miran categorías, agregan productos al carrito y te mandan el pedido directo.
+                    </p>
                   </div>
                   <div className="rounded-2xl bg-white p-5 shadow-sm">
-                    <p className="mb-2 font-semibold text-gp-neutral-900">La sumás a Instagram o Facebook</p>
-                    <p className="text-sm text-gp-neutral-600">La podés poner en tu bio o en publicaciones.</p>
+                    <p className="mb-2 font-semibold text-gp-neutral-900">Cómo la compartís</p>
+                    <p className="text-sm leading-relaxed text-gp-neutral-600">
+                      La podés poner en Instagram, Facebook, estados de WhatsApp o mandarla directo a cada cliente.
+                    </p>
                   </div>
-                  <div className="rounded-2xl bg-white p-5 shadow-sm">
-                    <p className="mb-2 font-semibold text-gp-neutral-900">Todo queda dentro del mismo sistema</p>
-                    <p className="text-sm text-gp-neutral-600">No necesitás contratar otra web aparte.</p>
+                  <div className="rounded-2xl border border-gp-primary-100 bg-gp-primary-50 p-5 shadow-sm">
+                    <p className="mb-2 font-semibold text-gp-primary-900">Lo importante</p>
+                    <p className="text-sm leading-relaxed text-gp-primary-800">
+                      No necesitás contratar otra web aparte. Ya viene integrada dentro del sistema.
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -633,15 +655,22 @@ export default function GestionProLanding() {
 
         <section className="py-20 md:py-32">
           <div className="container px-4 md:px-6">
-            <h2 className="mb-16 text-center text-3xl font-bold uppercase text-gp-neutral-900">
-              Comercios que pueden ordenarse con GestiónPro
-            </h2>
+            <div className="mb-16 text-center">
+              <Badge variant="outline" className="mb-4">
+                Casos reales
+              </Badge>
+              <h2 className="text-3xl font-bold uppercase text-gp-neutral-900">
+                Lo que ya está resolviendo GestiónPro
+              </h2>
+            </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {cases.map((item) => (
                 <Card key={item.title} className="border-none bg-gp-neutral-50 shadow-sm">
                   <CardHeader>
-                    <Badge className="mb-2 w-fit bg-gp-primary text-white">Caso</Badge>
+                    <Badge className="mb-2 w-fit bg-gp-primary text-white">
+                      {item.title.includes("Cliente real") ? "Cliente real" : "Caso de uso"}
+                    </Badge>
                     <CardTitle className="text-xl text-gp-neutral-900">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gp-neutral-700">{item.text}</CardContent>
