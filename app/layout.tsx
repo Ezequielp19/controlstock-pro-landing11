@@ -1,25 +1,21 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Montserrat } from "next/font/google"
 import "./globals.css"
 
-const montserrat = Montserrat({ subsets: ["latin"] })
-
 export const metadata: Metadata = {
-  title: "Gestión Pro – Gestión comercial inteligente",
-  description:
-    "Gestión Pro es la plataforma completa para negocios: inventarios, ventas, comprobantes y catálogos digitales en un solo lugar",
+  title: "Gestión Pro – Sistema simple para comercios con stock",
+  description: "Gestión Pro es un sistema simple para comercios con stock: ventas, precios, fiados, stock y ganancias en un solo lugar.",
   keywords: [
-    "software de gestión empresarial",
-    "sistema de inventarios",
-    "comprobantes digitales",
-    "punto de venta POS",
+    "sistema para comercios con stock",
     "gestión de stock",
-    "catálogo digital",
+    "ventas y precios",
+    "control de fiados",
+    "ganancias del negocio",
+    "software para comercios",
     "WhatsApp Business",
-    "reportes empresariales",
     "software para pymes",
-    "gestión de proveedores",
+    "punto de venta POS",
+    "control de mercadería",
   ],
   authors: [{ name: "Gestión Pro" }],
   creator: "Gestión Pro",
@@ -34,9 +30,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Gestión Pro – Gestión comercial inteligente",
-    description:
-      "La plataforma integral que combina inventarios, ventas, comprobantes y catálogos digitales en una sola herramienta",
+    title: "Gestión Pro – Sistema simple para comercios con stock",
+    description: "El sistema simple para comercios con stock que ordena ventas, precios, fiados, stock y ganancias.",
     url: "https://gestionpro.pro",
     siteName: "Gestión Pro",
     images: [
@@ -44,7 +39,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Gestión Pro - Dashboard de gestión empresarial",
+        alt: "Gestión Pro - Dashboard de gestión para comercios",
       },
     ],
     locale: "es_ES",
@@ -52,9 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gestión Pro – Gestión comercial inteligente",
-    description:
-      "La plataforma integral para inventarios, ventas, comprobantes y catálogos digitales",
+    title: "Gestión Pro – Sistema simple para comercios con stock",
+    description: "El sistema simple para comercios con stock que ordena ventas, precios, fiados, stock y ganancias.",
     images: ["/twitter-image.jpg"],
     creator: "@gestionpro",
   },
@@ -74,7 +68,7 @@ export const metadata: Metadata = {
     yandex: "yandex-verification-code",
     yahoo: "yahoo-site-verification-code",
   },
-  generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -96,8 +90,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#1e40af" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>
-      <body className={`${montserrat.className} antialiased`} suppressHydrationWarning>
-
+      <body className="antialiased" suppressHydrationWarning>
         {children}
         <script
           type="application/ld+json"
@@ -106,8 +99,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               name: "Gestión Pro",
-              description:
-                "Gestión comercial inteligente para tu negocio: inventarios, ventas, comprobantes y catálogos digitales",
+              description: "Sistema simple para comercios con stock: ventas, precios, fiados, stock y ganancias.",
               url: "https://gestionpro.pro",
               applicationCategory: "BusinessApplication",
               operatingSystem: "Web",
